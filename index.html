@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка Поэта-Блогера</title>
+    <link rel="stylesheet" href="C:\Users\asus\Desktop\папка на случай проблем чтобы перенести данные на внешний носитель\brend\css.css">
+    <script src="C:\Users\asus\Desktop\папка на случай проблем чтобы перенести данные на внешний носитель\brend\javaScript.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Имя Поэта</h1>
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#poems">Стихи</a>
+        <a href="#blog">Блог</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>Обо мне</h2>
+    <p>Я — поэт и блогер, пишущий о жизни, любви и природе. Мои стихи отражают мои мысли и чувства, а также вдохновляют других. Добро пожаловать в мой мир слов!</p>
+</section>
+
+<section id="poems">
+    <h2>Стихи</h2>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <h3>Стихотворение 1</h3>
+                <p>Здесь будет текст первого стихотворения...</p>
+            </div>
+            <div class="slide">
+                <h3>Стихотворение 2</h3>
+                <p>Здесь будет текст второго стихотворения...</p>
+            </div>
+            <div class="slide">
+                <h3>Стихотворение 3</h3>
+                <p>Здесь будет текст третьего стихотворения...</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="prevSlide()">Назад</button>
+            <button class="button" onclick="nextSlide()">Вперёд</button>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <h2>Блог</h2>
+    <p>В моем блоге я делюсь своими мыслями, идеями и вдохновением. Вот несколько последних записей:</p>
+    <ul>
+        <li><strong>Запись 1:</strong> Заголовок записи 1</li>
+        <li><strong>Запись 2:</strong> Заголовок записи 2</li>
+        <li><strong>Запись 3:</strong> Заголовок записи 3</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Контакты</h2>
+    <p>Вы можете связаться со мной по электронной почте: <a href="mailto:poet@example.com">poet@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Имя Поэта. Все права защищены.</p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+
+        if (index >= totalSlides) {
+            currentSlide = 0; // Вернуться к первому слайду
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1; // Вернуться к последнему слайду
+        } else {
+            currentSlide = index; // Установить текущий слайд
+        }
+
+        slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+</script>
+
+</body>
+</html>
