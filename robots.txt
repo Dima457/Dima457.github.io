@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /
+
+User-agent: Yandex
+Disallow: /massage-salon-na-sennoy/
+Allow: /massage-salon-na-sennoy/*.css
+Allow: /massage-salon-na-sennoy/*.jpg
+
+User-agent: GoogleBot
+Disallow: /massage-salon-na-sennoy/
+Allow: /massage-salon-na-sennoy/*.css
+Allow: /massage-salon-na-sennoy/*.jpg
+
+Sitemap:  https://massage-saloon-na-sennoy.netlify.app/sitemap.xml
+Host:  https://Dima457.github.io
