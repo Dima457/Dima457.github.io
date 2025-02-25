@@ -1,13 +1,13 @@
 User-agent: *
-Disallow: /
+Allow: /
 
 User-agent: Yandex
-Disallow: /
+Allow:/*.html
 Allow: /*.css
 
 
 User-agent: GoogleBot
-Disallow: /
+Allow:/*.html
 Allow: /*.css
 
 
